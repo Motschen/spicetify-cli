@@ -64,7 +64,7 @@ const SyncedLyricsPage = react.memo(
 
         const activeLines = useMemo(() => {
             const startIndex = Math.max(activeLineIndex - 1, 0);
-            return lyricWithEmptyLines.slice(startIndex, startIndex + LINES_TO_SHOW + 2);
+            return lyricWithEmptyLines.slice(startIndex - 1, startIndex + LINES_TO_SHOW + 2);
         }, [activeLineIndex, lyricWithEmptyLines]);
 
 
